@@ -1177,6 +1177,59 @@ body {
   text-transform: uppercase;
 }
 
+/* Family Card Portrait Avatars */
+.family-avatar-frame {
+  position: relative;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  padding: 3.5px;
+  background: linear-gradient(135deg, var(--gold-bright), rgba(212, 175, 55, 0.25), var(--gold-pure));
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55), 0 0 20px rgba(212, 175, 55, 0.25);
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.family-avatar-frame:hover {
+  transform: scale(1.06);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.45);
+}
+
+.family-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+  display: block;
+  border: 1.5px solid rgba(4, 13, 10, 0.85);
+  transition: transform 0.5s ease;
+}
+
+.family-avatar-frame:hover .family-avatar-img {
+  transform: scale(1.08);
+}
+
+.family-avatar-zoom {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(4, 13, 10, 0.45);
+  color: var(--gold-champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.family-avatar-frame:hover .family-avatar-zoom {
+  opacity: 1;
+}
+
 .family-couple-title {
   font-family: 'Bodoni Moda', 'Playfair Display', serif;
   font-size: 1.55rem;
